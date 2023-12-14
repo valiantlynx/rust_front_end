@@ -8,3 +8,12 @@ assuming you have rust installed, and you have the wasm32 target  and trunk inst
 ```bash
 trunk serve
 ```
+
+
+### adding new projects with their own git history
+```sh
+git subtree add --prefix=apps/rust_front_end https://github.com/valiantlynx/rust_front_end.git master --squash
+git subtree pull --prefix=apps/rust_front_end https://github.com/valiantlynx/rust_front_end.git master --squash
+git subtree push --prefix=apps/rust_front_end https://github.com/valiantlynx/rust_front_end.git master
+
+```
